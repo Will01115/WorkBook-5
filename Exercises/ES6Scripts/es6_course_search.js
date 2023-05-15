@@ -37,50 +37,56 @@ let courses = [
 ];
 // When does the PROG200 course start?
 
-// function findCourseByCourseId(CourseId) {}
-// function isPROG200(arrayValue) {
-//     if (arrayValue == "") {
-//         return true;
-//     } else {
-//       return false;
-//   }
-// }
-// function findCourse() {
-//     for (const course of courses) {
-//     if (course.CourseId === "PROG200") {
-//         return course
-//     }
-//   }
-// }
-// let course = findCourse();
-// console.log(course.StartDate);
+function findCourseByCourseId(CourseId) {}
+function isPROG200(arrayValue) {
+    if (arrayValue == "") {
+        return true;
+    } else {
+      return false;
+  }
+}
+function findCourse() {
+    for (const course of courses) {
+    if (course.CourseId === "PROG200") {
+        return course
+    }
+  }
+}
+let course = findCourse();
+console.log(course.StartDate);
+
+console.log("==============================");
 
 // What is the title of the PROJ500 course?
 
-// function findTitle() {
-//     for (const course of courses) {
-//         if (course.Title == "Introduction to Angular") {
-//             return course.Title
-//         }
-//     }
-// }
-// let title = findTitle();
-// console.log(title);
+function findTitle() {
+    for (const course of courses) {
+        if (course.Title == "Introduction to Angular") {
+            return course.Title
+        }
+    }
+}
+let title = findTitle();
+console.log(title);
+
+console.log("==============================");
 
 // What are the titles of the courses that cost $50 or less?
 
-// function filterCoursesByFee() {
-//     let filteredCourses = [];
-//     for (const course of courses) {
-//         let fee = Number(course.Fee)
-//         if (fee <= 50) {
-//             filteredCourses.push(course);
-//         }
-//     }
-//     return filteredCourses;
-// }
-// let filteredCourses = filterCoursesByFee();
-// console.log(filteredCourses);
+function filterCoursesByFee() {
+    let filteredCourses = [];
+    for (const course of courses) {
+        let fee = Number(course.Fee)
+        if (fee <= 50) {
+            filteredCourses.push(course);
+        }
+    }
+    return filteredCourses;
+}
+let filteredCourses = filterCoursesByFee();
+console.log(filteredCourses);
+
+console.log("==============================");
 
 // What classes meet in "Classroom 1"
 
