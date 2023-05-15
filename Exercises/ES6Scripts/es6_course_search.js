@@ -45,40 +45,53 @@ let courses = [
 //       return false;
 //   }
 // }
-function findCourse() {
-    for (const course of courses) {
-    if (course.CourseId === "PROG200") {
-        return course
-    }
-  }
-}
-let course = findCourse();
-console.log(course.StartDate);
+// function findCourse() {
+//     for (const course of courses) {
+//     if (course.CourseId === "PROG200") {
+//         return course
+//     }
+//   }
+// }
+// let course = findCourse();
+// console.log(course.StartDate);
 
 // What is the title of the PROJ500 course?
 
-function findTitle() {
-    for (const course of courses) {
-        if (course.Title == "Introduction to Angular") {
-            return course.Title
-        }
-    }
-}
-let title = findTitle();
-console.log(title);
+// function findTitle() {
+//     for (const course of courses) {
+//         if (course.Title == "Introduction to Angular") {
+//             return course.Title
+//         }
+//     }
+// }
+// let title = findTitle();
+// console.log(title);
 
 // What are the titles of the courses that cost $50 or less?
-function filterCoursesByFee() {
+
+// function filterCoursesByFee() {
+//     let filteredCourses = [];
+//     for (const course of courses) {
+//         let fee = Number(course.Fee)
+//         if (fee <= 50) {
+//             filteredCourses.push(course);
+//         }
+//     }
+//     return filteredCourses;
+// }
+// let filteredCourses = filterCoursesByFee();
+// console.log(filteredCourses);
+
+// What classes meet in "Classroom 1"
+
+function filterCoursesByLocation() {
     let filteredCourses = [];
     for (const course of courses) {
-        let fee = Number(course.Fee)
-        if (fee <= 50) {
+        if (course.Location == "Classroom 1") {
             filteredCourses.push(course);
         }
-    }
-    return filteredCourses;
-}
-let filteredCourses = filterCoursesByFee();
-console.log(filteredCourses);
-
-
+      }
+      return filteredCourses;
+    } 
+let filteredCourses2 = filterCoursesByLocation();
+console.log(filteredCourses2);
