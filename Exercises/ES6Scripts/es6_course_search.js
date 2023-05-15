@@ -55,5 +55,15 @@ function findCourse() {
 let course = findCourse();
 console.log(course.StartDate);
 
+// What is the title of the PROJ500 course?
 
+function findTitle() {
+    for (const course of courses) {
+        if (course.Title == "Introduction to Angular") {
+            return course.Title
+        }
+    }
+}
+let title = findTitle();
+console.log(title);
 
