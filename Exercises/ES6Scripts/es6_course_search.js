@@ -67,3 +67,18 @@ function findTitle() {
 let title = findTitle();
 console.log(title);
 
+// What are the titles of the courses that cost $50 or less?
+function filterCoursesByFee() {
+    let filteredCourses = [];
+    for (const course of courses) {
+        let fee = Number(course.Fee)
+        if (fee <= 50) {
+            filteredCourses.push(course);
+        }
+    }
+    return filteredCourses;
+}
+let filteredCourses = filterCoursesByFee();
+console.log(filteredCourses);
+
+
