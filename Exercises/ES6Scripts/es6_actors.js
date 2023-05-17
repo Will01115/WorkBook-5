@@ -46,3 +46,17 @@ function actorsWithFilmsThatStartWithA(actors) {
 
 console.log(actorsWithFilmsThatStartWithA(academyMembers));
 
+// Who has been in at least 3 films?
+
+function findMembersWithAtLeast3Films() {
+  return academyMembers.filter(function (members) {
+        return member.films.length >= 3;
+    });
+}
+
+console.log(findMembersWithAtLeast3Films());
+
+// Who has a name that starts with "Bob"?
+let membersWithNamedBob = academyMembers.filter(member => member.name.startsWith("Bob"));
+membersWithNamedBob.forEach(member => console.log(member));
+
