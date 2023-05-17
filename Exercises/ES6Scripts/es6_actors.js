@@ -23,11 +23,9 @@ let academyMembers = [
     },
    ];
    
-// let member = academyMembers.find(m => m.memID == 187);
-// console.log(member);
-
-// let members = academyMembers.filter(m => m.films.find(f => f.startsWith('A')));
-// console.log(members);
+// Who is the Academy Member whose ID is 187?
+let member = academyMembers.find(m => m.memID == 187);
+console.log(member);
 
 // HARDER: Which Academy Members have been in a film that starts with "A"
 function filmStartsWithA(film) {
