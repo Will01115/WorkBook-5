@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images Demo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <main>
+      <div>
+        <img src="https://placewaifu.com/image/215" />
+        <p>WAFIU</p>
+      </div>
+      <div>
+        <img src="https://placewaifu.com/image/200?" />
+        <p>WAFIU</p>
+      </div>
+      <div>
+        <img src="https://placewaifu.com/image/205?" />
+        <p>WAFIU</p>
+      </div>
+    </main>
+    <script>
+      const paragraphs = document.querySelectorAll("p");
+      for (const paragraph of paragraphs) {
+        paragraph.style.border = "1px solid white";
+      }
+
+      const images = document.querySelectorAll("img");
+      images.forEach((image) => {
+        image.classList.add("roundedImg");
+        image.alt = "anime image";
+      });
+    </script>
+  </body>
+</html>
