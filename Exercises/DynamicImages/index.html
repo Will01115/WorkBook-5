@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dynamic images</title>
 
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css"
     />
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <label for="imageList">Images</label>
-        <select name="images" id="imageList">
-            <option value="">Select Image. . .</option>
-            <option value=""></option>
-            <option value=""></option>
-        </select>/#imageList
+      <label for="imageList">Images</label>
+      <select name="images" id="image-list">
+        <option value="">Select Image. . .</option>
+      </select>
 
-        <button>
-            Add image
-        </button>
-        <button>
-            Clear Images
-        </button>
+      <button onclick="addImage();">Add image</button>
+      <button onclick="clearImages();">Clear Images</button>
 
-        <div id="imagesDiv">
-            
-        </div>/#imagesDiv
+      <div id="imagesDiv"></div>
     </main>
 
-
     <script>
-        //JS Code
-        "use strict"
+      "use strict";
 
+      let imageFiles = [
+        { name: "images/potato.jpeg", description: "A cute potato" },
+        { name: "images/AnnMarie.jpeg", description: "A beautiful Female"},
+        { name: "images/iop.jpeg", description: "A crazy Sponge"},
+        { name: "images/REM.jpeg", description: "A cute anime girl" },
+      ];
 
+      const imageList = document.querySelector("select#image-list");
+      const imagesDiv = document.querySelector("#imagesDiv");
+
+      function loadImageFiles() {
+        for (const image of imageFiles) {
+          let option = document.createElement("option");
+          option.value = image.name;
+          option.textContent = image.description;
+          imageList.appendChild(option);
+        }
+      }
+
+      loadImageFiles();
+
+      function addImage() {
+        if (!imageList.value) return;
+
+        const imageName = imageList.value;
+        const imageFile = imageFiles.find((image) => image.name === imageName);
+
+        const image = document.createElement("img");
+        image.src = imageFile.name;
+        image.alt = imageFile.description;
+        imagesDiv.append(image);
+      }
+
+      function clearImages() {
+        imagesDiv.innerHTML = "";
+      }
     </script>
-</body>
+  </body>
 </html>
